@@ -31,7 +31,7 @@ header {
     flex-direction: column;
 }
 /*step 5*/
-.nav_links:visited {
+.nav_lins, .nav_links:visited {
     color: blue;
 }
 /*step 6*/
