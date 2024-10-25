@@ -1,4 +1,5 @@
 /*step 1*/
+/*followed instructions from the reference link*/
 @keyframes logoanimate {
     from {
         width: 25px;
@@ -21,16 +22,19 @@ body {
 }
 /*step 3*/
 header {
+    /*centers the header items*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 /*step 4*/
 .nav_links {
+    /*makes the links display as a column*/
     display: flex;
     flex-direction: column;
 }
 /*step 5*/
+/*the :visited pseudoclass apparently doesn't work on most browsers for security reasons, so I've also applied the styling to the general .nav_links class*/
 .nav_links, .nav_links:visited {
     color: blue;
 }
@@ -38,7 +42,9 @@ header {
 .card > header {
     background-color: #288088;
     border: 2px solid #45ADAD;
+    /*shorthand means top and bottom are 20, left and right are 0*/
     padding: 20px 0;
+    /*I'm not certain of the shorthand for radius, if it exists*/
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
@@ -47,12 +53,13 @@ header {
     display: flex;
     flex-basis: 450px;
     flex-direction: column;
-    /*to match the radius of the headers*/
+    /*to match the radius of the headers, removing the extra bit of white that would otherwise show behind the headers*/
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
 /*step 8*/
 .pricing {
+    /*makes sure the pricing elements are properly positioned*/
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -65,6 +72,7 @@ header {
 }
 /*step 10*/
 .gallery {
+    /*makes it so the gallery contents are properly positioned according to the examples*/
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -73,17 +81,21 @@ header {
 @media all and (min-width: 900px) {
     /*step 11*/
     header {
+        /*display:flex is not specified here, as it is already applied earlier in the file*/
         flex-flow: nowrap;
         justify-content: space-between;
     }
     .nav_links {
+        /*display:flex is not specified here, as it is already applied earlier in the file*/
         flex-direction: row;
     }
     /*step 12*/
     .card {
+        /*display:flex is not specified here, as it is already applied earlier in the file*/
         flex-basis: 275px;
     }
     .pricing {
+        /*display:flex is not specified here, as it is already applied earlier in the file*/
         align-items: center;
     }
     /*step 13*/
@@ -109,19 +121,24 @@ header {
     }
     /*step 17*/
     nav {
+        /*makes the nav take up the full width so that the nav_links class items can be properly spaced with space-evenly*/
         width: 100%;
     }
     .nav_links {
+        /*display:flex is not specified here, as it is already applied earlier in the file*/
         flex-direction: row;
+        /*since nav is set to take up the full width of the page, space-evenly positions each link properly on the page according to the example*/
         justify-content: space-evenly;
     }
     /*step 18*/
     .pricing {
+        /*display:flex is not specified here, as it is already applied earlier in the file*/
         align-items: flex-end;
         flex-wrap: nowrap;
     }
     /*step 19*/
     .card {
+        /*display:flex is not specified here, as it is already applied earlier in the file*/
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
@@ -130,7 +147,9 @@ header {
         display: none;
     }
     /*step 21*/
+    /*places the emoji after the middle link in the unordered lists in card classes*/
     .card ul li:nth-of-type(2):after {
+        /*looked up the code for the thumbs up emoji*/
         content: "\01F44D";
     }
 }
